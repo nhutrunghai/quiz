@@ -4,14 +4,7 @@ import fetch from "node-fetch"; // Nếu dùng Node 18+ thì fetch đã có sẵ
 import cors from "cors";
 
 const app = express();
-app.use(
-  cors({
-    origin: ["http://localhost:3000", "https://wayground.com/","http://127.0.0.1:5500/"],
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    allowedHeaders: ["*"], // Cho phép tất cả các header
-    credentials: true, // Cho phép gửi cookie
-  })
-);
+app.use(cors());
 
 
 const headers = {
