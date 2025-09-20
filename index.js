@@ -4,7 +4,11 @@ import fetch from "node-fetch"; // Nếu dùng Node 18+ thì fetch đã có sẵ
 import cors from "cors";
 
 const app = express();
-app.use(cors()); // Cho phép CORS
+app.use(
+  cors({
+    origin: "*", // Hoặc có thể thay '*' bằng domain cụ thể nếu cần
+  })
+);
 
 const headers = {
   Accept: "*/*",
