@@ -6,7 +6,7 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: "*", // Cho phép tất cả các origin
+    origin: ["http://localhost:3000", "https://wayground.com/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["*"], // Cho phép tất cả các header
     credentials: true, // Cho phép gửi cookie
