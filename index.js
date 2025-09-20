@@ -6,9 +6,13 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: "*", // Hoặc có thể thay '*' bằng domain cụ thể nếu cần
+    origin: "*", // Cho phép tất cả các origin
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["*"], // Cho phép tất cả các header
+    credentials: true, // Cho phép gửi cookie
   })
 );
+
 
 const headers = {
   Accept: "*/*",
